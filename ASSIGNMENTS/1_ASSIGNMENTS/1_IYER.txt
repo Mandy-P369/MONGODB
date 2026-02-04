@@ -1,0 +1,1106 @@
+b.createCollection('students')
+{ ok: 1 }
+db.students.insertOne({name:"aayush",email:'aayushpateriya@mail.com',course:'mongodb',feespaid:5200,joiningdate:'29-Jan-2026'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('69838a1a9bc2310e3394ef84')
+}
+db.students.find()
+{
+  _id: ObjectId('69838a1a9bc2310e3394ef84'),
+  name: 'aayush',
+  email: 'aayushpateriya@mail.com',
+  course: 'mongodb',
+  feespaid: 5200,
+  joiningdate: '29-Jan-2026'
+}
+db.students.insertOne({name:''})
+{
+  acknowledged: true,
+  insertedId: ObjectId('69838a6d9bc2310e3394ef85')
+}
+db.students.insertMany({name:"Iyer",email:"Iyer_venugopal@gmail.com",course:'Python',feespaid:4500,joiningdate:'29-jan-2026'})
+MongoInvalidArgumentError: Argument "docs" must be an array of documents
+db.students.insertOne({name:"Iyer",email:"Iyer_venugopal@gmail.com",course:'Python',feespaid:4500,joiningdate:'29-jan-2026'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('69838da19bc2310e3394ef86')
+}
+db.students.insertOne({name:"mutthuswami venungopal iyer",email:"iyer@hotmail.com",course:'Java',feespaid:4300,joiningdate:'30-Jan-2026'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('69838f949bc2310e3394ef87')
+}
+db.students.insertOne({name:"chinnaswami mutthuswami venungopal iyer",email:"chinnaswami@yahoo.com",course:'R',feespaid:6300,joiningdate:'31-Jan-2026'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('69838fb59bc2310e3394ef88')
+}
+db.students.insertOne({name:"parambatur chinnaswami mutthuswami venungopal iyer",email:.'parambatur@yahoo.com',course:'C',feespaid:2800,joiningdate:'01-Feb-2026'})
+SyntaxError: Unexpected token (1:87)
+
+> 1 | db.students.insertOne({name:"parambatur chinnaswami mutthuswami venungopal iyer",email:.'parambatur@yahoo.com',course:'C',feespaid:2800,joiningdate:'01-Feb-2026'})
+    |                                                                                        ^
+db.students.insertOne({name:"parambatur chinnaswami mutthuswami venungopal iyer",email:'parambatur@yahoo.com',course:'C',feespaid:2800,joiningdate:'01-Feb-2026'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('698390099bc2310e3394ef89')
+}
+db.students.insertOne({name:" parambeel parambatur chinnaswami mutthuswami venungopal iyer",email:'parambeel@hotmail.com',course:'C++',feespaid:2800,joiningdate:'02-Feb-2026'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6983904b9bc2310e3394ef8a')
+}
+db.students.insertOne({name:})
+SyntaxError: Unexpected token (1:28)
+
+> 1 | db.students.insertOne({name:})
+    |                             ^
+db.students.insertOne({name:'yekya parambeel parambatur chinnaswami mutthuswami vvenugioopal iyer',email:'yekya@gmmial.com',course:''})
+{
+  acknowledged: true,
+  insertedId: ObjectId('698390c29bc2310e3394ef8b')
+}
+db.students.insertOne({name:'yekya parambeel parambatur chinnaswami mutthuswami vvenugioopal iyer',email:'yekya@gmmial.com',course:'Javascript',feespaid:5400,joiningdate :'02-Feb-2026'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('698390f69bc2310e3394ef8c')
+}
+db.students.find()
+{
+  _id: ObjectId('69838a1a9bc2310e3394ef84'),
+  name: 'aayush',
+  email: 'aayushpateriya@mail.com',
+  course: 'mongodb',
+  feespaid: 5200,
+  joiningdate: '29-Jan-2026'
+}
+{
+  _id: ObjectId('69838a6d9bc2310e3394ef85'),
+  name: ''
+}
+{
+  _id: ObjectId('69838da19bc2310e3394ef86'),
+  name: 'Iyer',
+  email: 'Iyer_venugopal@gmail.com',
+  course: 'Python',
+  feespaid: 4500,
+  joiningdate: '29-jan-2026'
+}
+{
+  _id: ObjectId('69838f949bc2310e3394ef87'),
+  name: 'mutthuswami venungopal iyer',
+  email: 'iyer@hotmail.com',
+  course: 'Java',
+  feespaid: 4300,
+  joiningdate: '30-Jan-2026'
+}
+{
+  _id: ObjectId('69838fb59bc2310e3394ef88'),
+  name: 'chinnaswami mutthuswami venungopal iyer',
+  email: 'chinnaswami@yahoo.com',
+  course: 'R',
+  feespaid: 6300,
+  joiningdate: '31-Jan-2026'
+}
+{
+  _id: ObjectId('698390099bc2310e3394ef89'),
+  name: 'parambatur chinnaswami mutthuswami venungopal iyer',
+  email: 'parambatur@yahoo.com',
+  course: 'C',
+  feespaid: 2800,
+  joiningdate: '01-Feb-2026'
+}
+{
+  _id: ObjectId('6983904b9bc2310e3394ef8a'),
+  name: ' parambeel parambatur chinnaswami mutthuswami venungopal iyer',
+  email: 'parambeel@hotmail.com',
+  course: 'C++',
+  feespaid: 2800,
+  joiningdate: '02-Feb-2026'
+}
+{
+  _id: ObjectId('698390c29bc2310e3394ef8b'),
+  name: 'yekya parambeel parambatur chinnaswami mutthuswami vvenugioopal iyer',
+  email: 'yekya@gmmial.com',
+  course: ''
+}
+{
+  _id: ObjectId('698390f69bc2310e3394ef8c'),
+  name: 'yekya parambeel parambatur chinnaswami mutthuswami vvenugioopal iyer',
+  email: 'yekya@gmmial.com',
+  course: 'Javascript',
+  feespaid: 5400,
+  joiningdate: '02-Feb-2026'
+}
+db.students.insertOne({name:'Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',email:'Trichipalli@gmmial.com',course:'Python',feespaid:5500,joiningdate :'03-Feb-2026'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('698391969bc2310e3394ef8d')
+}
+db.students.insertOne({name:'Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',email:'Sriniwasana@yahoo.com',course:'C#',feespaid:5560,joiningdate :'05-Jan-2026'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('698391f59bc2310e3394ef8e')
+}
+db.students.insertOne({name:'Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',email:'Rajasekara@yahoo.com',course:'C#',feespaid:4560,joiningdate :'05-Jan-2025'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6983921d9bc2310e3394ef8f')
+}
+db.students.insertOne({name:'Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',email:'Shivavvenkata@yahoo.com',course:'ASP.net',feespaid:4660,joiningdate :'25-Jan-2025'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('698392429bc2310e3394ef90')
+}
+db.students.insertOne({name:'Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',email:'Shivavvenkata@yahoo.com',course:'ASP.net',feespaid:4660,joiningdate :'25-Jan-2025'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('698392959bc2310e3394ef91')
+}
+db.students.insertOne({name:'Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',email:'Laxmansriramkrishna_Shivavvenkata@yahoo.com',course:'ASP.net',feespaid:4660,joiningdate :'25-Jan-2025'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('698392c09bc2310e3394ef92')
+}
+db.students.insertOne({name:'Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',email:'Jayasuriya@yahoo.com',course:'Oracle',feespaid:3660,joiningdate :'25-March-2025'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('698392f29bc2310e3394ef93')
+}
+db.students.insertOne({name:'Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',email:'Jayasuriya@hotmail.com',course:'SQL',feespaid:6667,joiningdate :'25-May-2025'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('698393169bc2310e3394ef94')
+}
+db.students.insertOne({name:'Sripalawardhana Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',email:'Sripalawardhana@gmail.com',course:'Postgresql',feespaid:6667,joiningdate :'25-May-2025'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('698393459bc2310e3394ef95')
+}
+db.students.insertOne({name:'PrabhakarnaSripalawardhana Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',email:'Sripalawardhana@hotmail.com',course:'MS Office',feespaid:6767,joiningdate :'26-May-2025'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6983938f9bc2310e3394ef96')
+}
+db.students.find()
+{
+  _id: ObjectId('69838a1a9bc2310e3394ef84'),
+  name: 'aayush',
+  email: 'aayushpateriya@mail.com',
+  course: 'mongodb',
+  feespaid: 5200,
+  joiningdate: '29-Jan-2026'
+}
+{
+  _id: ObjectId('69838a6d9bc2310e3394ef85'),
+  name: ''
+}
+{
+  _id: ObjectId('69838da19bc2310e3394ef86'),
+  name: 'Iyer',
+  email: 'Iyer_venugopal@gmail.com',
+  course: 'Python',
+  feespaid: 4500,
+  joiningdate: '29-jan-2026'
+}
+{
+  _id: ObjectId('69838f949bc2310e3394ef87'),
+  name: 'mutthuswami venungopal iyer',
+  email: 'iyer@hotmail.com',
+  course: 'Java',
+  feespaid: 4300,
+  joiningdate: '30-Jan-2026'
+}
+{
+  _id: ObjectId('69838fb59bc2310e3394ef88'),
+  name: 'chinnaswami mutthuswami venungopal iyer',
+  email: 'chinnaswami@yahoo.com',
+  course: 'R',
+  feespaid: 6300,
+  joiningdate: '31-Jan-2026'
+}
+{
+  _id: ObjectId('698390099bc2310e3394ef89'),
+  name: 'parambatur chinnaswami mutthuswami venungopal iyer',
+  email: 'parambatur@yahoo.com',
+  course: 'C',
+  feespaid: 2800,
+  joiningdate: '01-Feb-2026'
+}
+{
+  _id: ObjectId('6983904b9bc2310e3394ef8a'),
+  name: ' parambeel parambatur chinnaswami mutthuswami venungopal iyer',
+  email: 'parambeel@hotmail.com',
+  course: 'C++',
+  feespaid: 2800,
+  joiningdate: '02-Feb-2026'
+}
+{
+  _id: ObjectId('698390c29bc2310e3394ef8b'),
+  name: 'yekya parambeel parambatur chinnaswami mutthuswami vvenugioopal iyer',
+  email: 'yekya@gmmial.com',
+  course: ''
+}
+{
+  _id: ObjectId('698390f69bc2310e3394ef8c'),
+  name: 'yekya parambeel parambatur chinnaswami mutthuswami vvenugioopal iyer',
+  email: 'yekya@gmmial.com',
+  course: 'Javascript',
+  feespaid: 5400,
+  joiningdate: '02-Feb-2026'
+}
+{
+  _id: ObjectId('698391969bc2310e3394ef8d'),
+  name: 'Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Trichipalli@gmmial.com',
+  course: 'Python',
+  feespaid: 5500,
+  joiningdate: '03-Feb-2026'
+}
+{
+  _id: ObjectId('698391f59bc2310e3394ef8e'),
+  name: 'Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Sriniwasana@yahoo.com',
+  course: 'C#',
+  feespaid: 5560,
+  joiningdate: '05-Jan-2026'
+}
+{
+  _id: ObjectId('6983921d9bc2310e3394ef8f'),
+  name: 'Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Rajasekara@yahoo.com',
+  course: 'C#',
+  feespaid: 4560,
+  joiningdate: '05-Jan-2025'
+}
+{
+  _id: ObjectId('698392429bc2310e3394ef90'),
+  name: 'Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Shivavvenkata@yahoo.com',
+  course: 'ASP.net',
+  feespaid: 4660,
+  joiningdate: '25-Jan-2025'
+}
+{
+  _id: ObjectId('698392959bc2310e3394ef91'),
+  name: 'Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Shivavvenkata@yahoo.com',
+  course: 'ASP.net',
+  feespaid: 4660,
+  joiningdate: '25-Jan-2025'
+}
+{
+  _id: ObjectId('698392c09bc2310e3394ef92'),
+  name: 'Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Laxmansriramkrishna_Shivavvenkata@yahoo.com',
+  course: 'ASP.net',
+  feespaid: 4660,
+  joiningdate: '25-Jan-2025'
+}
+{
+  _id: ObjectId('698392f29bc2310e3394ef93'),
+  name: 'Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Jayasuriya@yahoo.com',
+  course: 'Oracle',
+  feespaid: 3660,
+  joiningdate: '25-March-2025'
+}
+{
+  _id: ObjectId('698393169bc2310e3394ef94'),
+  name: 'Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Jayasuriya@hotmail.com',
+  course: 'SQL',
+  feespaid: 6667,
+  joiningdate: '25-May-2025'
+}
+{
+  _id: ObjectId('698393459bc2310e3394ef95'),
+  name: 'Sripalawardhana Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Sripalawardhana@gmail.com',
+  course: 'Postgresql',
+  feespaid: 6667,
+  joiningdate: '25-May-2025'
+}
+{
+  _id: ObjectId('6983938f9bc2310e3394ef96'),
+  name: 'PrabhakarnaSripalawardhana Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Sripalawardhana@hotmail.com',
+  course: 'MS Office',
+  feespaid: 6767,
+  joiningdate: '26-May-2025'
+}
+db.students.insertMany({name:'superman',course:'python',fees:20000})
+MongoInvalidArgumentError: Argument "docs" must be an array of documents
+db.students.insertMany({name:'superman',course:'python',fees:20000},{name:'spiderman',course:'PHP',fees:15000})
+MongoInvalidArgumentError: Argument "docs" must be an array of documents
+db.students.insertMany([{name:'superman',course:'python',fees:20000},{name:'spiderman',course:'PHP',fees:15000}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('698394219bc2310e3394ef97'),
+    '1': ObjectId('698394219bc2310e3394ef98')
+  }
+}
+db.students.find(\)
+SyntaxError: Expecting Unicode escape sequence \uXXXX. (1:18)
+
+> 1 | db.students.find(\)
+    |                   ^
+db.students.find()
+{
+  _id: ObjectId('69838a1a9bc2310e3394ef84'),
+  name: 'aayush',
+  email: 'aayushpateriya@mail.com',
+  course: 'mongodb',
+  feespaid: 5200,
+  joiningdate: '29-Jan-2026'
+}
+{
+  _id: ObjectId('69838a6d9bc2310e3394ef85'),
+  name: ''
+}
+{
+  _id: ObjectId('69838da19bc2310e3394ef86'),
+  name: 'Iyer',
+  email: 'Iyer_venugopal@gmail.com',
+  course: 'Python',
+  feespaid: 4500,
+  joiningdate: '29-jan-2026'
+}
+{
+  _id: ObjectId('69838f949bc2310e3394ef87'),
+  name: 'mutthuswami venungopal iyer',
+  email: 'iyer@hotmail.com',
+  course: 'Java',
+  feespaid: 4300,
+  joiningdate: '30-Jan-2026'
+}
+{
+  _id: ObjectId('69838fb59bc2310e3394ef88'),
+  name: 'chinnaswami mutthuswami venungopal iyer',
+  email: 'chinnaswami@yahoo.com',
+  course: 'R',
+  feespaid: 6300,
+  joiningdate: '31-Jan-2026'
+}
+{
+  _id: ObjectId('698390099bc2310e3394ef89'),
+  name: 'parambatur chinnaswami mutthuswami venungopal iyer',
+  email: 'parambatur@yahoo.com',
+  course: 'C',
+  feespaid: 2800,
+  joiningdate: '01-Feb-2026'
+}
+{
+  _id: ObjectId('6983904b9bc2310e3394ef8a'),
+  name: ' parambeel parambatur chinnaswami mutthuswami venungopal iyer',
+  email: 'parambeel@hotmail.com',
+  course: 'C++',
+  feespaid: 2800,
+  joiningdate: '02-Feb-2026'
+}
+{
+  _id: ObjectId('698390c29bc2310e3394ef8b'),
+  name: 'yekya parambeel parambatur chinnaswami mutthuswami vvenugioopal iyer',
+  email: 'yekya@gmmial.com',
+  course: ''
+}
+{
+  _id: ObjectId('698390f69bc2310e3394ef8c'),
+  name: 'yekya parambeel parambatur chinnaswami mutthuswami vvenugioopal iyer',
+  email: 'yekya@gmmial.com',
+  course: 'Javascript',
+  feespaid: 5400,
+  joiningdate: '02-Feb-2026'
+}
+{
+  _id: ObjectId('698391969bc2310e3394ef8d'),
+  name: 'Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Trichipalli@gmmial.com',
+  course: 'Python',
+  feespaid: 5500,
+  joiningdate: '03-Feb-2026'
+}
+{
+  _id: ObjectId('698391f59bc2310e3394ef8e'),
+  name: 'Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Sriniwasana@yahoo.com',
+  course: 'C#',
+  feespaid: 5560,
+  joiningdate: '05-Jan-2026'
+}
+{
+  _id: ObjectId('6983921d9bc2310e3394ef8f'),
+  name: 'Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Rajasekara@yahoo.com',
+  course: 'C#',
+  feespaid: 4560,
+  joiningdate: '05-Jan-2025'
+}
+{
+  _id: ObjectId('698392429bc2310e3394ef90'),
+  name: 'Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Shivavvenkata@yahoo.com',
+  course: 'ASP.net',
+  feespaid: 4660,
+  joiningdate: '25-Jan-2025'
+}
+{
+  _id: ObjectId('698392959bc2310e3394ef91'),
+  name: 'Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Shivavvenkata@yahoo.com',
+  course: 'ASP.net',
+  feespaid: 4660,
+  joiningdate: '25-Jan-2025'
+}
+{
+  _id: ObjectId('698392c09bc2310e3394ef92'),
+  name: 'Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Laxmansriramkrishna_Shivavvenkata@yahoo.com',
+  course: 'ASP.net',
+  feespaid: 4660,
+  joiningdate: '25-Jan-2025'
+}
+{
+  _id: ObjectId('698392f29bc2310e3394ef93'),
+  name: 'Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Jayasuriya@yahoo.com',
+  course: 'Oracle',
+  feespaid: 3660,
+  joiningdate: '25-March-2025'
+}
+{
+  _id: ObjectId('698393169bc2310e3394ef94'),
+  name: 'Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Jayasuriya@hotmail.com',
+  course: 'SQL',
+  feespaid: 6667,
+  joiningdate: '25-May-2025'
+}
+{
+  _id: ObjectId('698393459bc2310e3394ef95'),
+  name: 'Sripalawardhana Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Sripalawardhana@gmail.com',
+  course: 'Postgresql',
+  feespaid: 6667,
+  joiningdate: '25-May-2025'
+}
+{
+  _id: ObjectId('6983938f9bc2310e3394ef96'),
+  name: 'PrabhakarnaSripalawardhana Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Sripalawardhana@hotmail.com',
+  course: 'MS Office',
+  feespaid: 6767,
+  joiningdate: '26-May-2025'
+}
+{
+  _id: ObjectId('698394219bc2310e3394ef97'),
+  name: 'superman',
+  course: 'python',
+  fees: 20000
+}
+Type "it" for more
+db.students.insrtMany([{name:'Dayalu chand',course:'Data analysis',fees:12000},{name:'Veer',course:'Website developer',fees:35000}])
+TypeError: db.students.insrtMany is not a function
+db.students.insertMany([{name:'Dayalu chand',course:'Data analysis',fees:12000},{name:'Veer',course:'Website developer',fees:35000}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6983950e9bc2310e3394ef99'),
+    '1': ObjectId('6983950e9bc2310e3394ef9a')
+  }
+}
+db.students.find()
+{
+  _id: ObjectId('69838a1a9bc2310e3394ef84'),
+  name: 'aayush',
+  email: 'aayushpateriya@mail.com',
+  course: 'mongodb',
+  feespaid: 5200,
+  joiningdate: '29-Jan-2026'
+}
+{
+  _id: ObjectId('69838a6d9bc2310e3394ef85'),
+  name: ''
+}
+{
+  _id: ObjectId('69838da19bc2310e3394ef86'),
+  name: 'Iyer',
+  email: 'Iyer_venugopal@gmail.com',
+  course: 'Python',
+  feespaid: 4500,
+  joiningdate: '29-jan-2026'
+}
+{
+  _id: ObjectId('69838f949bc2310e3394ef87'),
+  name: 'mutthuswami venungopal iyer',
+  email: 'iyer@hotmail.com',
+  course: 'Java',
+  feespaid: 4300,
+  joiningdate: '30-Jan-2026'
+}
+{
+  _id: ObjectId('69838fb59bc2310e3394ef88'),
+  name: 'chinnaswami mutthuswami venungopal iyer',
+  email: 'chinnaswami@yahoo.com',
+  course: 'R',
+  feespaid: 6300,
+  joiningdate: '31-Jan-2026'
+}
+{
+  _id: ObjectId('698390099bc2310e3394ef89'),
+  name: 'parambatur chinnaswami mutthuswami venungopal iyer',
+  email: 'parambatur@yahoo.com',
+  course: 'C',
+  feespaid: 2800,
+  joiningdate: '01-Feb-2026'
+}
+{
+  _id: ObjectId('6983904b9bc2310e3394ef8a'),
+  name: ' parambeel parambatur chinnaswami mutthuswami venungopal iyer',
+  email: 'parambeel@hotmail.com',
+  course: 'C++',
+  feespaid: 2800,
+  joiningdate: '02-Feb-2026'
+}
+{
+  _id: ObjectId('698390c29bc2310e3394ef8b'),
+  name: 'yekya parambeel parambatur chinnaswami mutthuswami vvenugioopal iyer',
+  email: 'yekya@gmmial.com',
+  course: ''
+}
+{
+  _id: ObjectId('698390f69bc2310e3394ef8c'),
+  name: 'yekya parambeel parambatur chinnaswami mutthuswami vvenugioopal iyer',
+  email: 'yekya@gmmial.com',
+  course: 'Javascript',
+  feespaid: 5400,
+  joiningdate: '02-Feb-2026'
+}
+{
+  _id: ObjectId('698391969bc2310e3394ef8d'),
+  name: 'Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Trichipalli@gmmial.com',
+  course: 'Python',
+  feespaid: 5500,
+  joiningdate: '03-Feb-2026'
+}
+{
+  _id: ObjectId('698391f59bc2310e3394ef8e'),
+  name: 'Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Sriniwasana@yahoo.com',
+  course: 'C#',
+  feespaid: 5560,
+  joiningdate: '05-Jan-2026'
+}
+{
+  _id: ObjectId('6983921d9bc2310e3394ef8f'),
+  name: 'Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Rajasekara@yahoo.com',
+  course: 'C#',
+  feespaid: 4560,
+  joiningdate: '05-Jan-2025'
+}
+{
+  _id: ObjectId('698392429bc2310e3394ef90'),
+  name: 'Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Shivavvenkata@yahoo.com',
+  course: 'ASP.net',
+  feespaid: 4660,
+  joiningdate: '25-Jan-2025'
+}
+{
+  _id: ObjectId('698392959bc2310e3394ef91'),
+  name: 'Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Shivavvenkata@yahoo.com',
+  course: 'ASP.net',
+  feespaid: 4660,
+  joiningdate: '25-Jan-2025'
+}
+{
+  _id: ObjectId('698392c09bc2310e3394ef92'),
+  name: 'Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Laxmansriramkrishna_Shivavvenkata@yahoo.com',
+  course: 'ASP.net',
+  feespaid: 4660,
+  joiningdate: '25-Jan-2025'
+}
+{
+  _id: ObjectId('698392f29bc2310e3394ef93'),
+  name: 'Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Jayasuriya@yahoo.com',
+  course: 'Oracle',
+  feespaid: 3660,
+  joiningdate: '25-March-2025'
+}
+{
+  _id: ObjectId('698393169bc2310e3394ef94'),
+  name: 'Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Jayasuriya@hotmail.com',
+  course: 'SQL',
+  feespaid: 6667,
+  joiningdate: '25-May-2025'
+}
+{
+  _id: ObjectId('698393459bc2310e3394ef95'),
+  name: 'Sripalawardhana Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Sripalawardhana@gmail.com',
+  course: 'Postgresql',
+  feespaid: 6667,
+  joiningdate: '25-May-2025'
+}
+{
+  _id: ObjectId('6983938f9bc2310e3394ef96'),
+  name: 'PrabhakarnaSripalawardhana Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Sripalawardhana@hotmail.com',
+  course: 'MS Office',
+  feespaid: 6767,
+  joiningdate: '26-May-2025'
+}
+{
+  _id: ObjectId('698394219bc2310e3394ef97'),
+  name: 'superman',
+  course: 'python',
+  fees: 20000
+}
+Type "it" for more
+db.students.insertOne({name:"Gabbar singh",enrolled:['CSS','Javascript','MongoDB']})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6983956e9bc2310e3394ef9b')
+}
+db.students.find()
+{
+  _id: ObjectId('69838a1a9bc2310e3394ef84'),
+  name: 'aayush',
+  email: 'aayushpateriya@mail.com',
+  course: 'mongodb',
+  feespaid: 5200,
+  joiningdate: '29-Jan-2026'
+}
+{
+  _id: ObjectId('69838a6d9bc2310e3394ef85'),
+  name: ''
+}
+{
+  _id: ObjectId('69838da19bc2310e3394ef86'),
+  name: 'Iyer',
+  email: 'Iyer_venugopal@gmail.com',
+  course: 'Python',
+  feespaid: 4500,
+  joiningdate: '29-jan-2026'
+}
+{
+  _id: ObjectId('69838f949bc2310e3394ef87'),
+  name: 'mutthuswami venungopal iyer',
+  email: 'iyer@hotmail.com',
+  course: 'Java',
+  feespaid: 4300,
+  joiningdate: '30-Jan-2026'
+}
+{
+  _id: ObjectId('69838fb59bc2310e3394ef88'),
+  name: 'chinnaswami mutthuswami venungopal iyer',
+  email: 'chinnaswami@yahoo.com',
+  course: 'R',
+  feespaid: 6300,
+  joiningdate: '31-Jan-2026'
+}
+{
+  _id: ObjectId('698390099bc2310e3394ef89'),
+  name: 'parambatur chinnaswami mutthuswami venungopal iyer',
+  email: 'parambatur@yahoo.com',
+  course: 'C',
+  feespaid: 2800,
+  joiningdate: '01-Feb-2026'
+}
+{
+  _id: ObjectId('6983904b9bc2310e3394ef8a'),
+  name: ' parambeel parambatur chinnaswami mutthuswami venungopal iyer',
+  email: 'parambeel@hotmail.com',
+  course: 'C++',
+  feespaid: 2800,
+  joiningdate: '02-Feb-2026'
+}
+{
+  _id: ObjectId('698390c29bc2310e3394ef8b'),
+  name: 'yekya parambeel parambatur chinnaswami mutthuswami vvenugioopal iyer',
+  email: 'yekya@gmmial.com',
+  course: ''
+}
+{
+  _id: ObjectId('698390f69bc2310e3394ef8c'),
+  name: 'yekya parambeel parambatur chinnaswami mutthuswami vvenugioopal iyer',
+  email: 'yekya@gmmial.com',
+  course: 'Javascript',
+  feespaid: 5400,
+  joiningdate: '02-Feb-2026'
+}
+{
+  _id: ObjectId('698391969bc2310e3394ef8d'),
+  name: 'Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Trichipalli@gmmial.com',
+  course: 'Python',
+  feespaid: 5500,
+  joiningdate: '03-Feb-2026'
+}
+{
+  _id: ObjectId('698391f59bc2310e3394ef8e'),
+  name: 'Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Sriniwasana@yahoo.com',
+  course: 'C#',
+  feespaid: 5560,
+  joiningdate: '05-Jan-2026'
+}
+{
+  _id: ObjectId('6983921d9bc2310e3394ef8f'),
+  name: 'Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Rajasekara@yahoo.com',
+  course: 'C#',
+  feespaid: 4560,
+  joiningdate: '05-Jan-2025'
+}
+{
+  _id: ObjectId('698392429bc2310e3394ef90'),
+  name: 'Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Shivavvenkata@yahoo.com',
+  course: 'ASP.net',
+  feespaid: 4660,
+  joiningdate: '25-Jan-2025'
+}
+{
+  _id: ObjectId('698392959bc2310e3394ef91'),
+  name: 'Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Shivavvenkata@yahoo.com',
+  course: 'ASP.net',
+  feespaid: 4660,
+  joiningdate: '25-Jan-2025'
+}
+{
+  _id: ObjectId('698392c09bc2310e3394ef92'),
+  name: 'Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Laxmansriramkrishna_Shivavvenkata@yahoo.com',
+  course: 'ASP.net',
+  feespaid: 4660,
+  joiningdate: '25-Jan-2025'
+}
+{
+  _id: ObjectId('698392f29bc2310e3394ef93'),
+  name: 'Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Jayasuriya@yahoo.com',
+  course: 'Oracle',
+  feespaid: 3660,
+  joiningdate: '25-March-2025'
+}
+{
+  _id: ObjectId('698393169bc2310e3394ef94'),
+  name: 'Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Jayasuriya@hotmail.com',
+  course: 'SQL',
+  feespaid: 6667,
+  joiningdate: '25-May-2025'
+}
+{
+  _id: ObjectId('698393459bc2310e3394ef95'),
+  name: 'Sripalawardhana Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Sripalawardhana@gmail.com',
+  course: 'Postgresql',
+  feespaid: 6667,
+  joiningdate: '25-May-2025'
+}
+{
+  _id: ObjectId('6983938f9bc2310e3394ef96'),
+  name: 'PrabhakarnaSripalawardhana Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Sripalawardhana@hotmail.com',
+  course: 'MS Office',
+  feespaid: 6767,
+  joiningdate: '26-May-2025'
+}
+{
+  _id: ObjectId('698394219bc2310e3394ef97'),
+  name: 'superman',
+  course: 'python',
+  fees: 20000
+}
+Type "it" for more
+it
+{
+  _id: ObjectId('698394219bc2310e3394ef98'),
+  name: 'spiderman',
+  course: 'PHP',
+  fees: 15000
+}
+{
+  _id: ObjectId('6983950e9bc2310e3394ef99'),
+  name: 'Dayalu chand',
+  course: 'Data analysis',
+  fees: 12000
+}
+{
+  _id: ObjectId('6983950e9bc2310e3394ef9a'),
+  name: 'Veer',
+  course: 'Website developer',
+  fees: 35000
+}
+{
+  _id: ObjectId('6983956e9bc2310e3394ef9b'),
+  name: 'Gabbar singh',
+  enrolled: [
+    'CSS',
+    'Javascript',
+    'MongoDB'
+  ]
+}
+db.students.insertOne({name:'Anthony Gonsalves',address:{location:'Roop mahal',street:'Prem Gali ',houseno:'kholi no 420'}})
+{
+  acknowledged: true,
+  insertedId: ObjectId('698396179bc2310e3394ef9c')
+}
+db.students.find()
+{
+  _id: ObjectId('69838a1a9bc2310e3394ef84'),
+  name: 'aayush',
+  email: 'aayushpateriya@mail.com',
+  course: 'mongodb',
+  feespaid: 5200,
+  joiningdate: '29-Jan-2026'
+}
+{
+  _id: ObjectId('69838a6d9bc2310e3394ef85'),
+  name: ''
+}
+{
+  _id: ObjectId('69838da19bc2310e3394ef86'),
+  name: 'Iyer',
+  email: 'Iyer_venugopal@gmail.com',
+  course: 'Python',
+  feespaid: 4500,
+  joiningdate: '29-jan-2026'
+}
+{
+  _id: ObjectId('69838f949bc2310e3394ef87'),
+  name: 'mutthuswami venungopal iyer',
+  email: 'iyer@hotmail.com',
+  course: 'Java',
+  feespaid: 4300,
+  joiningdate: '30-Jan-2026'
+}
+{
+  _id: ObjectId('69838fb59bc2310e3394ef88'),
+  name: 'chinnaswami mutthuswami venungopal iyer',
+  email: 'chinnaswami@yahoo.com',
+  course: 'R',
+  feespaid: 6300,
+  joiningdate: '31-Jan-2026'
+}
+{
+  _id: ObjectId('698390099bc2310e3394ef89'),
+  name: 'parambatur chinnaswami mutthuswami venungopal iyer',
+  email: 'parambatur@yahoo.com',
+  course: 'C',
+  feespaid: 2800,
+  joiningdate: '01-Feb-2026'
+}
+{
+  _id: ObjectId('6983904b9bc2310e3394ef8a'),
+  name: ' parambeel parambatur chinnaswami mutthuswami venungopal iyer',
+  email: 'parambeel@hotmail.com',
+  course: 'C++',
+  feespaid: 2800,
+  joiningdate: '02-Feb-2026'
+}
+{
+  _id: ObjectId('698390c29bc2310e3394ef8b'),
+  name: 'yekya parambeel parambatur chinnaswami mutthuswami vvenugioopal iyer',
+  email: 'yekya@gmmial.com',
+  course: ''
+}
+{
+  _id: ObjectId('698390f69bc2310e3394ef8c'),
+  name: 'yekya parambeel parambatur chinnaswami mutthuswami vvenugioopal iyer',
+  email: 'yekya@gmmial.com',
+  course: 'Javascript',
+  feespaid: 5400,
+  joiningdate: '02-Feb-2026'
+}
+{
+  _id: ObjectId('698391969bc2310e3394ef8d'),
+  name: 'Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Trichipalli@gmmial.com',
+  course: 'Python',
+  feespaid: 5500,
+  joiningdate: '03-Feb-2026'
+}
+{
+  _id: ObjectId('698391f59bc2310e3394ef8e'),
+  name: 'Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Sriniwasana@yahoo.com',
+  course: 'C#',
+  feespaid: 5560,
+  joiningdate: '05-Jan-2026'
+}
+{
+  _id: ObjectId('6983921d9bc2310e3394ef8f'),
+  name: 'Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Rajasekara@yahoo.com',
+  course: 'C#',
+  feespaid: 4560,
+  joiningdate: '05-Jan-2025'
+}
+{
+  _id: ObjectId('698392429bc2310e3394ef90'),
+  name: 'Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Shivavvenkata@yahoo.com',
+  course: 'ASP.net',
+  feespaid: 4660,
+  joiningdate: '25-Jan-2025'
+}
+{
+  _id: ObjectId('698392959bc2310e3394ef91'),
+  name: 'Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Shivavvenkata@yahoo.com',
+  course: 'ASP.net',
+  feespaid: 4660,
+  joiningdate: '25-Jan-2025'
+}
+{
+  _id: ObjectId('698392c09bc2310e3394ef92'),
+  name: 'Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Laxmansriramkrishna_Shivavvenkata@yahoo.com',
+  course: 'ASP.net',
+  feespaid: 4660,
+  joiningdate: '25-Jan-2025'
+}
+{
+  _id: ObjectId('698392f29bc2310e3394ef93'),
+  name: 'Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Jayasuriya@yahoo.com',
+  course: 'Oracle',
+  feespaid: 3660,
+  joiningdate: '25-March-2025'
+}
+{
+  _id: ObjectId('698393169bc2310e3394ef94'),
+  name: 'Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Jayasuriya@hotmail.com',
+  course: 'SQL',
+  feespaid: 6667,
+  joiningdate: '25-May-2025'
+}
+{
+  _id: ObjectId('698393459bc2310e3394ef95'),
+  name: 'Sripalawardhana Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Sripalawardhana@gmail.com',
+  course: 'Postgresql',
+  feespaid: 6667,
+  joiningdate: '25-May-2025'
+}
+{
+  _id: ObjectId('6983938f9bc2310e3394ef96'),
+  name: 'PrabhakarnaSripalawardhana Atapattu Jayasuriya Laxmansriramkrishna Shivavenkata Rajasekara Sriniwasana Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer',
+  email: 'Sripalawardhana@hotmail.com',
+  course: 'MS Office',
+  feespaid: 6767,
+  joiningdate: '26-May-2025'
+}
+{
+  _id: ObjectId('698394219bc2310e3394ef97'),
+  name: 'superman',
+  course: 'python',
+  fees: 20000
+}
+Type "it" for more
+it
+{
+  _id: ObjectId('698394219bc2310e3394ef98'),
+  name: 'spiderman',
+  course: 'PHP',
+  fees: 15000
+}
+{
+  _id: ObjectId('6983950e9bc2310e3394ef99'),
+  name: 'Dayalu chand',
+  course: 'Data analysis',
+  fees: 12000
+}
+{
+  _id: ObjectId('6983950e9bc2310e3394ef9a'),
+  name: 'Veer',
+  course: 'Website developer',
+  fees: 35000
+}
+{
+  _id: ObjectId('6983956e9bc2310e3394ef9b'),
+  name: 'Gabbar singh',
+  enrolled: [
+    'CSS',
+    'Javascript',
+    'MongoDB'
+  ]
+}
+{
+  _id: ObjectId('698396179bc2310e3394ef9c'),
+  name: 'Anthony Gonsalves',
+  address: {
+    location: 'Roop mahal',
+    street: 'Prem Gali ',
+    houseno: 'kholi no 420'
+  }
+}
+it
+no cursor
+db.students.find({course:'Java'},{name:1\})
+SyntaxError: Expecting Unicode escape sequence \uXXXX. (1:41)
+
+> 1 | db.students.find({course:'Java'},{name:1\})
+    |                                          ^
+db.students.find({course:'Java'},{name:1})
+{
+  _id: ObjectId('69838f949bc2310e3394ef87'),
+  name: 'mutthuswami venungopal iyer'
+}
+db.students.find({course:'Python'},{name:1})
+{
+  _id: ObjectId('69838da19bc2310e3394ef86'),
+  name: 'Iyer'
+}
+{
+  _id: ObjectId('698391969bc2310e3394ef8d'),
+  name: 'Trichipalli yekya parambeel parambatur chinnaswami mutthuswami venugopal iyer'
+}
+db.students.find({course:'R'},{name:1})
+{
+  _id: ObjectId('69838fb59bc2310e3394ef88'),
+  name: 'chinnaswami mutthuswami venungopal iyer'
+}
+db.students.find({course:'R'},{name:1},{course:1})
+{
+  _id: ObjectId('69838fb59bc2310e3394ef88'),
+  name: 'chinnaswami mutthuswami venungopal iyer'
+}
+db.students.find({course:'R'},{name:1},{course:2})
+{
+  _id: ObjectId('69838fb59bc2310e3394ef88'),
+  name: 'chinnaswami mutthuswami venungopal iyer'
+}
+db.students.find({course:'R'},{name:1},{_id:0})
+{
+  _id: ObjectId('69838fb59bc2310e3394ef88'),
+  name: 'chinnaswami mutthuswami venungopal iyer'
+}
+db.students.find({course:'Javascript'},{name:1})
+{
+  _id: ObjectId('698390f69bc2310e3394ef8c'),
+  name: 'yekya parambeel parambatur chinnaswami mutthuswami vvenugioopal iyer'
+}
+notepad mongo_commands.js
+SyntaxError: Missing semicolon. (1:7)
+
+> 1 | notepad mongo_commands.js
+    |        ^
+  2 |
+notepad mongo_commands
+SyntaxError: Missing semicolon. (1:7)
+
+> 1 | notepad mongo_commands
